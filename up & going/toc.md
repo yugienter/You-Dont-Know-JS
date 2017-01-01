@@ -4,7 +4,7 @@
 
 * Lời tựa
 * Mở đầu
-* Chương 1: Giới thiệu về Lập trình
+* Chương 1: Nhập môn Lập trình
 	* Code
 	* Try It Yourself
 	* Operators
