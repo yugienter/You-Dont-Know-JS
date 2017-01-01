@@ -1,5 +1,5 @@
 # You Don't Know JS: Up & Going
-# Chapter 1: Into Programming
+# Chương 1: Nhập môn Lập Trình
 
 Welcome to the *You Don't Know JS* (*YDKJS*) series.
 
