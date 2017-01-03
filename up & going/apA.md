@@ -5,7 +5,7 @@ I have many people to thank for making this book title and the overall series ha
 
 Có rất nhiều người tôi muốn cảm ơn vì đã giúp tôi hoàn thành quyển sách này cũng như cả bộ sách.
 
-Đầu tiên, tôi muốn cảm ơn vợ Christen Simpson và hai con là Ethan và Emily đã luôn hỗ trợ khi ông bố cứ ngồi "mổ cò" trên máy tính. Thậm chí khi không viết sách, thì việc theo dõi các tin bài về JavaScript cũng khiến toi dán măt vào màn hình máy tính nhiều hơn mức cần thiết. Khoản thời gian tôi "mượn" từ gia đình tôi là lý do giúp cho bộ sách trở nên chuyên sâu hơn và có thể giải thích cho bạn hiểu rõ hơn về JavaScript, vì thế tôi nợ gia đình tôi mọi thứ. 
+Đầu tiên, tôi muốn cảm ơn vợ Christen Simpson và hai con là Ethan và Emily đã luôn hỗ trợ khi ông bố cứ ngồi "mổ cò" trên máy tính. Thậm chí khi không viết sách, thì việc theo dõi các tin bài về JavaScript cũng khiến tôi dán mắt vào màn hình máy tính nhiều hơn mức cần thiết. Khoản thời gian tôi "mượn" từ gia đình tôi là lý do giúp cho bộ sách trở nên chuyên sâu hơn và có thể giải thích cho bạn hiểu rõ hơn về JavaScript, vì thế tôi nợ gia đình tôi mọi thứ. 
 
 Tôi muốn cảm ơn các biên tập viên tại O'Reilly: Simon St.Laurent và Brian MacDonald, cùng với toàn thể các anh chị biên tập viên và marketing khác. Thật tuyệt vời khi được làm việc cùng họ.
 
