@@ -1,78 +1,79 @@
 # You Don't Know JS: Up & Going
 # Chương 1: Nhập môn Lập Trình
 
-Welcome to the *You Don't Know JS* (*YDKJS*) series.
+Chào mừng bạn đến với *You Don't Know JS* (*YDKJS*).
 
-*Up & Going* is an introduction to several basic concepts of programming -- of course we lean toward JavaScript (often abbreviated JS) specifically -- and how to approach and understand the rest of the titles in this series. Especially if you're just getting into programming and/or JavaScript, this book will briefly explore what you need to get *up and going*.
+*Up & Going* là phần giới thiệu về những khái niệm căn bản về nhập môn lập trình -- và tất nhiên chúng ta sẽ học về JavaScript (thường được viết tắt là JS) -- và cách chúng ta tiếp cận và hiểu rõ những phần khác của series sách này. Đặc biệt nếu bạn vừa mới tiếp cận với lập trình hoặc tìm hiểu về JavaScript, cuốn sách này sẽ giới thiệu tổng quát những điều bạn cần để bắt đầu cuộc hành trình (*up and going*).
 
-This book starts off explaining the basic principles of programming at a very high level. It's mostly intended if you are starting *YDKJS* with little to no prior programming experience, and are looking to these books to help get you started along a path to understanding programming through the lens of JavaScript.
+Cuốn sách này bắt đầu bằng việc giải thích những khái niệm căn bản của lập trình ở mức rất cao. Nó thực sự dành cho những người mới bắt đầu tìm hiểu về *YDKJS* với rất ít hoặc không có kinh nghiệm lập trình, và tìm kiếm sự trợ giúp từ cuốn sách để giúp bạn bắt đầu cuộc hành trình dẫn tới sự hiểu biết về lập trình thông qua lăng kính của JavaScript.
 
-Chapter 1 should be approached as a quick overview of the things you'll want to learn more about and practice to get *into programming*. There are also many other fantastic programming introduction resources that can help you dig into these topics further, and I encourage you to learn from them in addition to this chapter.
+Chương 1 nên được tiếp cận như một cách nhìn tổng quát về những điều bạn muốn học  và thực hành để bạn thực sự đi vào thế giới lập trình. Ngoài ra còn có nhiều nguồn tài nguyên tuyệt vời khác để giúp bạn tìm hiểu sâu hơn về những chủ đề này, và tôi khuyến khích bạn tìm hiểu thêm từ những nguồn đó như một sự bổ sung kiến thức vào chương này.
 
-Once you feel comfortable with general programming basics, Chapter 2 will help guide you to a familiarity with JavaScript's flavor of programming. Chapter 2 introduces what JavaScript is about, but again, it's not a comprehensive guide -- that's what the rest of the *YDKJS* books are for!
+Một khi bạn cảm thất thoải mái về những khái niệm căn bản, Chương 2 sẽ giúp bạn tìm hiểu về những hương vị quen thuộc của lập trình JavaScript. Chương 2 giới thiệu về JavaScript và một lần nữa nhấn mạnh rằng đó không phải là một hướng dẫn trọn vẹn -- cái mà những phần khác của *YDKJS* sẽ nói đến.
 
-If you're already fairly comfortable with JavaScript, first check out Chapter 3 as a brief glimpse of what to expect from *YDKJS*, then jump right in!
+Nếu bạn đã khá thoải mái về JavaScript thì hãy bắt tay ngay vào từ chương 3 như một cái nhìn ngắn gọn về những gì bạn thật sự chờ đợi từ *YDKJS*
 
 ## Code
 
-Let's start from the beginning.
+Hãy bắt đầu ngay từ những dòng đầu tiên.
 
-A program, often referred to as *source code* or just *code*, is a set of special instructions to tell the computer what tasks to perform. Usually code is saved in a text file, although with JavaScript you can also type code directly into a developer console in a browser, which we'll cover shortly.
+Một chương trình, thường được gọi là một *source code* hay đơn giản chỉ là *code*, là một tập hợp các hướng dẫn đặc biệt để nói với máy tính thực thi những nhiệm vụ được giao. Thông thường thì code được lưu trữ trong các file văn bản, mặc dù với JavaScript, bạn có thể gõ code ngay trực tiếp trên giao diện developer của trình duyệt, mà chúng tôi sẽ giới thiệu đến trong thời gian ngắn tới.
 
-The rules for valid format and combinations of instructions is called a *computer language*, sometimes referred to as its *syntax*, much the same as English tells you how to spell words and how to create valid sentences using words and punctuation.
+Các quy tắc để định dạng và kết hợp các hướng dẫn lại với nhau gọi là  *computer language*, đôi khi được gọi là *syntax*, nó cũng tương tụ như tiếng Anh cho bạn biết cách đánh vần từng từ và làm thế nào để tạo ra các câu có nghĩa bằng các từ vựng và dấu câu.
+
 
 ### Statements
 
-In a computer language, a group of words, numbers, and operators that performs a specific task is a *statement*. In JavaScript, a statement might look as follows:
+Trong một ngôn ngữ máy tính, một nhóm các chữ cái, con số và operators thực hiện một nhiệm vụ nào đó được gọi là *statement*. Trong JavaScript, một *statement* nhìn giống như sau:
 
 ```js
 a = b * 2;
 ```
+Các ký tự `a` và `b` được gọi là *variables* (Xem thêm ở "Variables"), bạn có thể xem nó như là một cái hộp mà bạn có thể lưu trữ đồ vật trong đó. Trong lập trình, variables lưu trữ giá trị (ví dụ con số `42`), các giá trị này được sử dụng trong chương trình. Nghĩ về nó giống như là ký tự biểu tượng cho các giá trị của chính bản thân nó.
 
-The characters `a` and `b` are called *variables* (see "Variables"), which are like simple boxes you can store any of your stuff in. In programs, variables hold values (like the number `42`) to be used by the program. Think of them as symbolic placeholders for the values themselves.
+Ngược lại, `2` chỉ mang giá trị của chính nó, được gọi là *literal value*, vì nó đứng một mình và ko được lưu trữ trong một variable nào cả.
 
-By contrast, the `2` is just a value itself, called a *literal value*, because it stands alone without being stored in a variable.
+Các ký tự `=` và `*` gọi là các *operators*  (Xem thêm phần "Operators") -- Nó thực hiện các hoạt động liên quan tới giá trị và các variables như là gán giá trị và tính toán toán học.
 
-The `=` and `*` characters are *operators* (see "Operators") -- they perform actions with the values and variables such as assignment and mathematic multiplication.
+Đa phần các statements trong JavaScript được kết thúc bởi dấm chấm phẩy (`;`).
 
-Most statements in JavaScript conclude with a semicolon (`;`) at the end.
+Statement `a = b * 2;` ra lệnh cho máy tính lấy giá trị hiện tại được lưu giữa trong variable `b`, rồi nhân nó với giá trị `2`, sau đó lưu trữ kết quả ngược trở lại vào một variable khác được gọi là `a`.
 
-The statement `a = b * 2;` tells the computer, roughly, to get the current value stored in the variable `b`, multiply that value by `2`, then store the result back into another variable we call `a`.
+Chương trình máy tính thực ra chỉ là một tập hơp các statements, mà cùng với nhau chúng mô tả nên cac bước để thực hiện mục đích của chương trình máy tính.
 
-Programs are just collections of many such statements, which together describe all the steps that it takes to perform your program's purpose.
 
 ### Expressions
 
-Statements are made up of one or more *expressions*. An expression is any reference to a variable or value, or a set of variable(s) and value(s) combined with operators.
+Những statment được tạo nên bởi một hoặc nhiều *expressions*. Một expression là một tham chiếu đến một variable hoặc một giá trị, hoặc một tập hợp các variable(s) và giá trị kết hợp với các operators.
 
-For example:
+Ví dụ:
 
 ```js
 a = b * 2;
 ```
+Statement này có 4 expressions:
 
-This statement has four expressions in it:
+* `2` là một *literal value expression*
+* `b` là một *variable expression*, có nghĩa là nó lấy giá trị hiện tại lưu trữ trong nó.
+* `b * 2` là một *arithmetic expression*, có nghĩa là nó thực hiện một phép nhân.
+* `a = b * 2` là một *assignment expression*, có nghĩa là nó gán kết quả của phép nhân `b * 2`cho variable `a` (chúng ta sẽ tìm hiểu thêm ở các bài tập sau)
 
-* `2` is a *literal value expression*
-* `b` is a *variable expression*, which means to retrieve its current value
-* `b * 2` is an *arithmetic expression*, which means to do the multiplication
-* `a = b * 2` is an *assignment expression*, which means to assign the result of the `b * 2` expression to the variable `a` (more on assignments later)
-
-A general expression that stands alone is also called an *expression statement*, such as the following:
+Một expression đứng riêng một mình nó thì được gọi là một *expression statement*, như ví dụ sau:
 
 ```js
 b * 2;
 ```
 
-This flavor of expression statement is not very common or useful, as generally it wouldn't have any effect on the running of the program -- it would retrieve the value of `b` and multiply it by `2`, but then wouldn't do anything with that result.
+Cách viết này thường không phổ biến và hữu dụng, thông thường nó sẽ không ảnh hưởng gì đến hoạt động của chương trình -- nó nhận giá trị lưu trữ trong `b` và nhân giá trị đó với `2`, nhưng sau đó nó không làm gì với kết quả trả lại.
 
-A more common expression statement is a *call expression* statement (see "Functions"), as the entire statement is the function call expression itself:
+Một expression thường gặp hơn gọi là *call expression* (Xem thêm mục "Functions"), toàn bộ expression là một function gọi đến chính nó:
 
 ```js
 alert( a );
 ```
 
 ### Executing a Program
+
 
 How do those collections of programming statements tell the computer what to do? The program needs to be *executed*, also referred to as *running the program*.
 
