@@ -3,21 +3,21 @@
 
 Chào mừng bạn đến với *You Don't Know JS* (*YDKJS*).
 
-*Up & Going* là phần giới thiệu về những khái niệm căn bản về nhập môn lập trình -- và tất nhiên chúng ta sẽ học về JavaScript (thường được viết tắt là JS) -- và cách chúng ta tiếp cận và hiểu rõ những phần khác của series sách này. Đặc biệt nếu bạn vừa mới tiếp cận với lập trình hoặc tìm hiểu về JavaScript, cuốn sách này sẽ giới thiệu tổng quát những điều bạn cần để bắt đầu cuộc hành trình (*up and going*).
+*Up & Going* là phần giới thiệu những khái niệm căn bản về nhập môn lập trình -- và tất nhiên chúng ta sẽ học về JavaScript (thường được viết tắt là JS) -- và cách chúng ta tiếp cận, hiểu rõ những phần khác của series sách này. Đặc biệt nếu bạn vừa mới tiếp cận với lập trình hoặc tìm hiểu về JavaScript, cuốn sách này sẽ giới thiệu tổng quát những điều bạn cần để bắt đầu cuộc hành trình (*up and going*).
 
-Cuốn sách này bắt đầu bằng việc giải thích những khái niệm căn bản của lập trình ở mức rất cao. Nó thực sự dành cho những người mới bắt đầu tìm hiểu về *YDKJS* với rất ít hoặc không có kinh nghiệm lập trình, và tìm kiếm sự trợ giúp từ cuốn sách để giúp bạn bắt đầu cuộc hành trình dẫn tới sự hiểu biết về lập trình thông qua lăng kính của JavaScript.
+Cuốn sách này bắt đầu bằng việc giải thích những khái niệm căn bản của lập trình ở mức cao. Nó thực sự dành cho những người mới bắt đầu tìm hiểu về *YDKJS* với rất ít hoặc không có kinh nghiệm lập trình, và tìm kiếm sự trợ giúp từ cuốn sách để giúp bạn bắt đầu cuộc hành trình dẫn tới sự hiểu biết về lập trình thông qua lăng kính của JavaScript.
 
-Chương 1 nên được tiếp cận như một cách nhìn tổng quát về những điều bạn muốn học  và thực hành để bạn thực sự đi vào thế giới lập trình. Ngoài ra còn có nhiều nguồn tài nguyên tuyệt vời khác để giúp bạn tìm hiểu sâu hơn về những chủ đề này, và tôi khuyến khích bạn tìm hiểu thêm từ những nguồn đó như một sự bổ sung kiến thức vào chương này.
+Chương 1 nên được tiếp cận như một cách nhìn tổng quát về những điều bạn muốn học và thực hành để bạn thực sự đi vào thế giới lập trình. Ngoài ra còn có nhiều nguồn tài nguyên tuyệt vời khác để giúp bạn tìm hiểu sâu hơn về những chủ đề này, tôi khuyến khích bạn tìm hiểu thêm từ những nguồn đó như một sự bổ sung kiến thức vào chương sách này.
 
-Một khi bạn cảm thất thoải mái về những khái niệm căn bản, Chương 2 sẽ giúp bạn tìm hiểu về những hương vị quen thuộc của lập trình JavaScript. Chương 2 giới thiệu về JavaScript và một lần nữa nhấn mạnh rằng đó không phải là một hướng dẫn trọn vẹn -- cái mà những phần khác của *YDKJS* sẽ nói đến.
+Một khi bạn cảm thấy thoải mái về những khái niệm căn bản, Chương 2 sẽ giúp bạn tìm hiểu về những hương vị quen thuộc của lập trình JavaScript. Chương 2 giới thiệu về JavaScript và một lần nữa xin nhấn mạnh rằng đó không phải là một hướng dẫn trọn vẹn -- cái mà những phần khác của *YDKJS* sẽ nói đến.
 
-Nếu bạn đã khá thoải mái về JavaScript thì hãy bắt tay ngay vào từ chương 3 như một cái nhìn ngắn gọn về những gì bạn thật sự chờ đợi từ *YDKJS*
+Nếu bạn đã khá thoải mái về JavaScript thì hãy bắt tay ngay vào từ chương 3 như một cách nhìn ngắn gọn về những gì bạn thật sự chờ đợi từ *YDKJS*
 
 ## Code
 
 Hãy bắt đầu ngay từ những dòng đầu tiên.
 
-Một chương trình, thường được gọi là một *source code* hay đơn giản chỉ là *code*, là một tập hợp các hướng dẫn đặc biệt để nói với máy tính thực thi những nhiệm vụ được giao. Thông thường thì code được lưu trữ trong các file văn bản, mặc dù với JavaScript, bạn có thể gõ code ngay trực tiếp trên giao diện developer của trình duyệt, mà chúng tôi sẽ giới thiệu đến trong thời gian ngắn tới.
+Một chương trình, thường được gọi là một *source code* hay đơn giản chỉ là *code*, là một tập hợp các hướng dẫn đặc biệt để nói với máy tính thực thi những nhiệm vụ được giao. Thông thường thì code được lưu trữ trong các file văn bản, mặc dù với JavaScript, bạn có thể gõ code ngay trực tiếp trên giao diện developer của trình duyệt, chúng tôi sẽ giới thiệu đến trong thời gian ngắn tới.
 
 Các quy tắc để định dạng và kết hợp các hướng dẫn lại với nhau gọi là  *computer language*, đôi khi được gọi là *syntax*, nó cũng tương tụ như tiếng Anh cho bạn biết cách đánh vần từng từ và làm thế nào để tạo ra các câu có nghĩa bằng các từ vựng và dấu câu.
 
@@ -37,9 +37,9 @@ Các ký tự `=` và `*` gọi là các *operators*  (Xem thêm phần "Operato
 
 Đa phần các statements trong JavaScript được kết thúc bởi dấm chấm phẩy (`;`).
 
-Statement `a = b * 2;` ra lệnh cho máy tính lấy giá trị hiện tại được lưu giữa trong variable `b`, rồi nhân nó với giá trị `2`, sau đó lưu trữ kết quả ngược trở lại vào một variable khác được gọi là `a`.
+Statement `a = b * 2;` ra lệnh cho máy tính lấy giá trị hiện tại được lưu giữ trong variable `b`, rồi nhân nó với giá trị `2`, sau đó lưu trữ kết quả ngược trở lại vào một variable khác được gọi là `a`.
 
-Chương trình máy tính thực ra chỉ là một tập hơp các statements, mà cùng với nhau chúng mô tả nên cac bước để thực hiện mục đích của chương trình máy tính.
+Chương trình máy tính thực ra chỉ là một tập hơp các statements, mà cùng với nhau chúng mô tả nên các bước để thực hiện mục đích của chương trình máy tính.
 
 
 ### Expressions
@@ -54,9 +54,9 @@ a = b * 2;
 Statement này có 4 expressions:
 
 * `2` là một *literal value expression*
-* `b` là một *variable expression*, có nghĩa là nó lấy giá trị hiện tại lưu trữ trong nó.
-* `b * 2` là một *arithmetic expression*, có nghĩa là nó thực hiện một phép nhân.
-* `a = b * 2` là một *assignment expression*, có nghĩa là nó gán kết quả của phép nhân `b * 2`cho variable `a` (chúng ta sẽ tìm hiểu thêm ở các bài tập sau)
+* `b` là một *variable expression*, nghĩa là nó lấy giá trị hiện tại lưu trữ trong nó.
+* `b * 2` là một *arithmetic expression*, nghĩa là nó thực hiện một phép nhân.
+* `a = b * 2` là một *assignment expression*, nghĩa là nó gán kết quả của phép nhân `b * 2` cho variable `a` (chúng ta sẽ tìm hiểu thêm ở các bài tập sau).
 
 Một expression đứng riêng một mình nó thì được gọi là một *expression statement*, như ví dụ sau:
 
@@ -72,32 +72,31 @@ Một expression thường gặp hơn gọi là *call expression* (Xem thêm m�
 alert( a );
 ```
 
-### Executing a Program
+### Thực hiện một Chương trình
 
+Làm thế nào để một tập hợp những statements trong một chương trình có thể ra lệnh cho máy tính? Chương trình cần được thực hiện hay còn gọi là chạy chương trình (*executed* hoặc là *running the program*)
 
-How do those collections of programming statements tell the computer what to do? The program needs to be *executed*, also referred to as *running the program*.
+Statement được viết như là `a = b * 2` rất hữu dụng cho các lập trình viên vì họ có thể đọc và viết nó, nhưng nó không phải là cách mà máy tính có thể hiểu được. Vì vậy, một tiện ích đặc biệt trên máy tính gọi là thông dịch hoặc biên dịch (*interpreter* hoặc *compiler*) được dùng để dịch các đoạn mã bạn viết thành các câu lệnh mà máy tính có thể hiểu được.
 
-Statements like `a = b * 2` are helpful for developers when reading and writing, but are not actually in a form the computer can directly understand. So a special utility on the computer (either an *interpreter* or a *compiler*) is used to translate the code you write into commands a computer can understand.
+Thông dịch *interpreter*: Với một số ngôn ngữ máy tính, thông dịch là cách dịch các dòng lệnh từ trên xuống dưới, từng dòng một, mỗi khi chương trình được chạy.
 
-For some computer languages, this translation of commands is typically done from top to bottom, line by line, every time the program is run, which is usually called *interpreting* the code.
+Biên dịch *compiler*: Với một số ngôn ngữ máy tính khác, biên dịch là cách mà các dòng lệnh được dịch trước, sau đó khi chạy chương trình, thực ra máy tính chỉ chạy lại bản dịch đã có sẵn.
 
-For other languages, the translation is done ahead of time, called *compiling* the code, so when the program *runs* later, what's running is actually the already compiled computer instructions ready to go.
+JavaScript thường được hiểu là một ngôn ngữ thông dịch *interpreted*, bởi vì mã nguồn JavaScript được xử lý mỗi khi nó được chạy. Nhưng điều đó không hoàn toàn chính xác. Các engine của JavaScript thực ra đã biên dịch toàn bộ chương trình và khi chương trình chạy, nó thực ra chạy trên những đoạn mã đã được biên dịch.
 
-It's typically asserted that JavaScript is *interpreted*, because your JavaScript source code is processed each time it's run. But that's not entirely accurate. The JavaScript engine actually *compiles* the program on the fly and then immediately runs the compiled code.
-
-**Note:** For more information on JavaScript compiling, see the first two chapters of the *Scope & Closures* title of this series.
+**Note:** Để tìm hiểu thêm thông tin về biên dịch JavaScript, xem thêm 2 chương đầu của cuốn *Scope & Closures*
 
 ## Try It Yourself
 
-This chapter is going to introduce each programming concept with simple snippets of code, all written in JavaScript (obviously!).
+Chương này sẽ giới thiệu từng khái niệm lập trình bằng các đoạn mã đơn giản, tất nhiên được viết bằng JavaScript :)
 
-It cannot be emphasized enough: while you go through this chapter -- and you may need to spend the time to go over it several times -- you should practice each of these concepts by typing the code yourself. The easiest way to do that is to open up the developer tools console in your nearest browser (Firefox, Chrome, IE, etc.).
+Cần phải nhấn mạnh rằng: khi bạn học qua chương này -- bạn cần phải dành thời gian học đi học lại nhiều lần -- bạn cần phải thực hành các khái niệm được học bằng cách tự mình gõ lại những đoạn code được học. Cách dễ nhất để gõ những đoạn code là mở giao diện developer tools tích hợp sẵn trong các trình duyệt (Firefox, Chrome, IE, etc.).
 
-**Tip:** Typically, you can launch the developer console with a keyboard shortcut or from a menu item. For more detailed information about launching and using the console in your favorite browser, see "Mastering The Developer Tools Console" (http://blog.teamtreehouse.com/mastering-developer-tools-console). To type multiple lines into the console at once, use `<shift> + <enter>` to move to the next new line. Once you hit `<enter>` by itself, the console will run everything you've just typed.
+**Tip:** Thông thường, bạn có thể khởi động giao diện developers tools bằng các phím tắt hoặc từ các menu. Để biết thêm thông tin chi tiết về việc kích hoạt và sử dụng các giao diện này, xin xem thêm ở đây: "Mastering The Developer Tools Console" (http://blog.teamtreehouse.com/mastering-developer-tools-console). Để có thể gõ cùng lúc nhiều dòng lệnh vào giao diện, bạn dùng `<shift> + <enter>` để sang dòng. Khi bạn gõ `<enter>` một mình, giao diện sẽ hiểu là bạn muốn chạy tất cả mọi thứ bạn vừa gõ.
 
-Let's get familiar with the process of running code in the console. First, I suggest opening up an empty tab in your browser. I prefer to do this by typing `about:blank` into the address bar. Then, make sure your developer console is open, as we just mentioned.
+Nào hãy cùng làm quan với quá trình chạy code trong giao diện điều khiển. Đầu tiên, tôi muốn bạn mở một tab trống trong trình duyệt của bạn. Tôi thường hay gõ `about:blank` vào thanh địa chỉ. Sau đó, đảm bảo rằng giao diện developer của bạn đã được mở, như chúng ta đã nói ở trên.
 
-Now, type this code and see how it runs:
+Còn bây giờ thì gõ những dòng code sau và xem chúng sẽ chạy thế nào:
 
 ```js
 a = 21;
@@ -107,80 +106,79 @@ b = a * 2;
 console.log( b );
 ```
 
-Typing the preceding code into the console in Chrome should produce something like the following:
+Nếu bạn gõ những dòng lệnh đó vào trong console của Chrome nó sẽ hiện lên như sau:
 
 <img src="fig1.png" width="500">
 
-Go on, try it. The best way to learn programming is to start coding!
+
+Go on, try it. Cách tốt nhất để học lập trình và bắt đầu coding.
 
 ### Output
 
-In the previous code snippet, we used `console.log(..)`. Briefly, let's look at what that line of code is all about.
+Trong đoạn mã phía trên, chúng ta sử dụng `console.log(..)`. Tóm lại, hãy cùng nhìn xem đoạn mã đó nói cái gì.  
 
-You may have guessed, but that's exactly how we print text (aka *output* to the user) in the developer console. There are two characteristics of that statement that we should explain.
+Bạn có thể đã đoán ra, nhưng đó chính xác là các chúng ta in ra một đoạn văn bản (được hiểu là *output* cho người sử dụng) trong giao diện developer. Có 2 đặc điểm của statement đó mà chúng ra cùng giải thích.
 
-First, the `log( b )` part is referred to as a function call (see "Functions"). What's happening is we're handing the `b` variable to that function, which asks it to take the value of `b` and print it to the console.
+Đầu tiên, dòng `log(b)` là một phần của một function (Xem thêm "Function"). Điều thực sự xảy ra đó là chúng ta bàn giao variable `b` cho function, và yêu cầu nó in ra màn hình giao diện.
 
-Second, the `console.` part is an object reference where the `log(..)` function is located. We cover objects and their properties in more detail in Chapter 2.
+Thứ hai, phần `console.` là một object nơi lưu trữ function `log(..)`. Chúng ta sẽ tìm hiểu thêm về objects và các properties trong Chương 2.
 
-Another way of creating output that you can see is to run an `alert(..)` statement. For example:
+Một cách khác để tạo nên một output là bạn chạy statement `alert(..)`. Ví dụ như:
 
 ```js
 alert( b );
 ```
+Nếu bạn chạy dòng lệnh đó, bạn sẽ thấy là thay vì in ra giao diện điều khiển, nó sẽ nhảy ra một popup "Ok" với nội dung của variable `b`. Tuy nhiên, sử dụng `console.log(..)` thường sẽ làm cho việc học và chạy các chương trình đơn giản hơn sử dụng `alert(..)`, vì bạn có thể output ra nhiều giá trị cùng lúc mà không làm gián đoạn giao diện của trình duyệt.
 
-If you run that, you'll notice that instead of printing the output to the console, it shows a popup "OK" box with the contents of the `b` variable. However, using `console.log(..)` is generally going to make learning about coding and running your programs in the console easier than using `alert(..)`, because you can output many values at once without interrupting the browser interface.
-
-For this book, we'll use `console.log(..)` for output.
+Trong cuống sách này, chúng ta sẽ sử dụng `console.log(..)` cho các ouput.
 
 ### Input
 
-While we're discussing output, you may also wonder about *input* (i.e., receiving information from the user).
+Trong khi chúng ta tìm hiểu về output, bạn có thể tự hỏi về *input* (tức là tiếp nhận thông tin từ người dùng).
 
-The most common way that happens is for the HTML page to show form elements (like text boxes) to a user that they can type into, and then using JS to read those values into your program's variables.
+Cách phổ biến nhất để nhận input là một trang HTML có chứa các form elements (ví dụ như hộp thoại - text boxes) để người dùng có thể nhập dữ liệu vào, và sau đó dùng JS để đọc các giá trị đó vào trong các variables của chương trình.
 
-But there's an easier way to get input for simple learning and demonstration purposes such as what you'll be doing throughout this book. Use the `prompt(..)` function:
+Nhưng có một cách dễ hơn để nhận input cho mục đích học tập và trình diễn đơn giản như những gì bạn sẽ làm trong suốt cuốn sách này. Đó là sử dụng `prompt(..)` function:
 
 ```js
 age = prompt( "Please tell me your age:" );
 
 console.log( age );
 ```
+Có thể bạn cũng đoán ra được, thông điệp bạn gõ vào `prompt(..)` -- ở đây là dòng `"Please tell me your age:"` -- sẽ được in ra trong một popup.
 
-As you may have guessed, the message you pass to `prompt(..)` -- in this case, `"Please tell me your age:"` -- is printed into the popup.
-
-This should look similar to the following:
+Nó trông giống như sau:
 
 <img src="fig2.png" width="500">
 
-Once you submit the input text by clicking "OK," you'll observe that the value you typed is stored in the `age` variable, which we then *output* with `console.log(..)`:
+Sau khi bạn gửi đoạn văn bản input đó đi bằng cách click "OK", bạn sẽ nhận thấy rằng giá trị mà bạn nhập vào sẽ được lưu trữ trong variable `age`, và được *output* trong `console.log(..)`:
 
 <img src="fig3.png" width="500">
 
-To keep things simple while we're learning basic programming concepts, the examples in this book will not require input. But now that you've seen how to use `prompt(..)`, if you want to challenge yourself you can try to use input in your explorations of the examples.
+Để giữ cho mọi thứ đơn giản trong quá trình chúng ta học những điều cản bản nhất của lập trình, những ví dụ trong cuốn sách này sẽ không yêu cầu input. Nhưng từ giờ bạn sẽ hiểu cách dùng của `prompt(..)`, và nếu bạn muốn thử thách bản thân mình, bạn có thể sử dụng nó để input trong những ví dụ tìm tòi của bạn.  
 
 ## Operators
 
-Operators are how we perform actions on variables and values. We've already seen two JavaScript operators, the `=` and the `*`.
+Operators là cách chúng ta thực hiện các thao tác trên variables và giá trị. Chúng ta đã thấy 2 ví dụ về JavaScript operators, đó là `=` và `*`.
 
-The `*` operator performs mathematic multiplication. Simple enough, right?
+Operator `*` thực hiện phép nhân toán học, quá đơn giản, phải không? :)
 
-The `=` equals operator is used for *assignment* -- we first calculate the value on the *right-hand side* (source value) of the `=` and then put it into the variable that we specify on the *left-hand side* (target variable).
+Operator `=` được sử dụng để gán giá trị *assignment* -- đầu tiên chúng ta tính toán giá trị bên vế phải của `=` (giá trị nguồn) và sau đó đặt nó vào trong variable được chỉ định bên vế trái (variable mục tiêu)
 
-**Warning:** This may seem like a strange reverse order to specify assignment. Instead of `a = 42`, some might prefer to flip the order so the source value is on the left and the target variable is on the right, like `42 -> a` (this is not valid JavaScript!). Unfortunately, the `a = 42` ordered form, and similar variations, is quite prevalent in modern programming languages. If it feels unnatural, just spend some time rehearsing that ordering in your mind to get accustomed to it.
 
-Consider:
+**Warning:** Điều này nhìn qua giống như đảo ngược thứ tự thông thường. Thay vì `a = 42`, một số người thích lật lại thứ tự bằng cách cho giá trị nguồn sang bên trái và đặt variable mục tiêu sang vế phải, giống như là `42 -> a` (Điều này không hợp lệ trong JavaScript). Thật không may là cách đặt `a = 42`, và các biến thể tương tự, là khá phổ biến trong các ngôn ngữ lập trình hiện đại. Nếu bạn cảm thấy không tự nhiên, xin dành một chút thời gian làm quen với nó.   
+
+Xem xét:
 
 ```js
 a = 2;
 b = a + 1;
 ```
+Ở đây chúng ta gán giá trị `2` cho variable `a`. Sau đó chúng ta lấy giá trị của variable `a` (vẫn là `2` thôi), và thêm `1` vào nó để dẫn đến giá trị `3`, sau đó lưu trữ giá trị đó trong variable `b`.
 
-Here, we assign the `2` value to the `a` variable. Then, we get the value of the `a` variable (still `2`), add `1` to it resulting in the value `3`, then store that value in the `b` variable.
+Bạn cần có từ khoá `var` trong các chương trình của mình, nó như là cách chính thống để khai báo (hoặc tạo ra) các *variables* (Xem thêm mục "Variables").
 
-While not technically an operator, you'll need the keyword `var` in every program, as it's the primary way you *declare* (aka *create*) *var*iables (see "Variables").
-
-You should always declare the variable by name before you use it. But you only need to declare a variable once for each *scope* (see "Scope"); it can be used as many times after that as needed. For example:
+Bạn nên khai báo các variable bằng tên trước khi bạn sử dụng nó. Tuy nhiên bạn chỉ cần khai báo 1 variable một lần duy nhất trong 1 *scope* (Xem thêm "Scope"), và sau đó bạn có thể sử dụng nó bao nhiêu lần tuỳ bạn. Ví dụ:  
 
 ```js
 var a = 20;
@@ -191,46 +189,48 @@ a = a * 2;
 console.log( a );	// 42
 ```
 
-Here are some of the most common operators in JavaScript:
+Sau đây là các operators thông thường trong JavaScript:
 
-* Assignment: `=` as in `a = 2`.
-* Math: `+` (addition), `-` (subtraction), `*` (multiplication), and `/` (division), as in `a * 3`.
-* Compound Assignment: `+=`, `-=`, `*=`, and `/=` are compound operators that combine a math operation with assignment, as in `a += 2` (same as `a = a + 2`).
-* Increment/Decrement: `++` (increment), `--` (decrement), as in `a++` (similar to `a = a + 1`).
-* Object Property Access: `.` as in `console.log()`.
+* Gán giá trị: `=` như trong `a = 2`.
+* Phép toán: `+` (Cộng), `-` (Trừ), `*` (Nhân), and `/` (Chia), như trong `a * 3`.
+* Gán giá trị hỗn hợp: `+=`, `-=`, `*=`, và `/=` là các phép gán giá trị hỗn hợp được tạo thành từ một phép toán với một phép gán giá trị, như trong `a += 2` (giống với `a = a + 2`).
+* Tăng/Giảm: `++` (tăng), `--` (giảm), như trong `a++` (tương tự với `a = a + 1`).
+* Truy cập đến Object Property: `.` trong `console.log()`.
 
-   Objects are values that hold other values at specific named locations called properties. `obj.a` means an object value called `obj` with a property of the name `a`. Properties can alternatively be accessed as `obj["a"]`. See Chapter 2.
-* Equality: `==` (loose-equals), `===` (strict-equals), `!=` (loose not-equals), `!==` (strict not-equals), as in `a == b`.
+   Objects là các giá trị giữ các giá trị khác bằng một cái tên với địa chỉ cụ thể, gọi là properties. `obj.a` có nghĩa là một object gọi là `obj` có chứa một property có tên là `a`.
+   Properties có thể được truy cập bằng cách `obj["a"]`. Xem thêm Chương 2
 
-   See "Values & Types" and Chapter 2.
-* Comparison: `<` (less than), `>` (greater than), `<=` (less than or loose-equals), `>=` (greater than or loose-equals), as in `a <= b`.
+* Phép cân bằng Equality: `==` (loose-equals), `===` (strict-equals), `!=` (loose not-equals), `!==` (strict not-equals), như trong `a == b`.
 
-   See "Values & Types" and Chapter 2.
-* Logical: `&&` (and), `||` (or), as in `a || b` that selects either `a` *or* `b`.
+   Xem thêm "Values & Types" và Chương 2.
+* So sánh: `<` (bé hơn), `>` (lớn hơn), `<=` (bé hơn hay còn gọi là loose-equals), `>=` (lớn hơn hay còn gọi là loose-equals), như trong `a <= b`.
 
-   These operators are used to express compound conditionals (see "Conditionals"), like if either `a` *or* `b` is true.
+  Xem thêm "Values & Types" và Chương 2.
+* Biến logic Logical: `&&` (Và), `||` (Hoặc), như trong `a || b` có nghĩa là chọn `a` hoặc `b`.
 
-**Note:** For much more detail, and coverage of operators not mentioned here, see the Mozilla Developer Network (MDN)'s "Expressions and Operators" (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+   Những operators này được sử dụng để diễn tả điều kiện hỗn hợp (Xem thêm "Conditionals"), giống như là `a` hoặc `b` đúng thì cả điều kiện sẽ đúng.
+
+**Note:** Tìm hiểu thêm về các operators ở trên, theo link sau: Mozilla Developer Network (MDN)'s "Expressions and Operators" (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
 
 ## Values & Types
 
-If you ask an employee at a phone store how much a certain phone costs, and they say "ninety-nine, ninety-nine" (i.e., $99.99), they're giving you an actual numeric dollar figure that represents what you'll need to pay (plus taxes) to buy it. If you want to buy two of those phones, you can easily do the mental math to double that value to get $199.98 for your base cost.
+Nếu bạn hỏi một nhân viên ở cửa hàng điện thoại về giá tiền của một chiếc điện thoại, họ sẽ nói là "Chín chín chấm chín chín" ($99.99), họ đang đưa cho bạn một con số cụ thể đại diện cho giá tiền bạn phải trả (cộng thuế) để mua nó. Nếu bạn muốn mua 2 cái, bạn có thể tính nhẩm số tiền bạn phải trả là $199.98.
 
-If that same employee picks up another similar phone but says it's "free" (perhaps with air quotes), they're not giving you a number, but instead another kind of representation of your expected cost ($0.00) -- the word "free."
+Nếu cũng là người nhân viên đó đưa cho bạn một chiếc điện thoại khác và bảo bạn là "free" (Tất nhiên là trong ngoặc kép :)), họ không đưa cho bạn một con số cụ thể, mà thực ra họ đưa một cách hiểu khác cho cái giá bạn thực trả ($0.00) -- của từ "free".
 
-When you later ask if the phone includes a charger, that answer could only have been either "yes" or "no."
+Nếu sau đó bạn hỏi lại là chiếc điện thoại có đi kèm theo chân sạc không? Thì câu trả lời chỉ có thể là "có" hoặc "không".
 
-In very similar ways, when you express values in a program, you choose different representations for those values based on what you plan to do with them.
+Trong cách hiểu tương tự, khi bạn thể hiện các giá trị trong một chương trình, bạn chọn các đại diện khác nhau cho các giá trị dựa trên những gì bạn dự định làm với chúng.
 
-These different representations for values are called *types* in programming terminology. JavaScript has built-in types for each of these so called *primitive* values:
+Những đại diện khác nhau cho các giá trị này được gọi là các *types* trong ngôn ngữ lập trình. Trong JavaScript đã xây dựng sẵn các types nguyên thuỷ:
 
-* When you need to do math, you want a `number`.
-* When you need to print a value on the screen, you need a `string` (one or more characters, words, sentences).
-* When you need to make a decision in your program, you need a `boolean` (`true` or `false`).
+* Khi thực hiện các phép toán, bạn sử dụng các con số - `number`.
+* Khi bạn muốn in ra các giá trị trên màn hình, bạn cần các chuỗi `string` (Một hoặc nhiều các ký tự, chữ cái, hoặc các câu).
+* Khi bạn cần đưa ra các quyết định, bạn cần các kiểu `boolean` (`true` hoặc `false`).
 
-Values that are included directly in the source code are called *literals*. `string` literals are surrounded by double quotes `"..."` or single quotes (`'...'`) -- the only difference is stylistic preference. `number` and `boolean` literals are just presented as is (i.e., `42`, `true`, etc.).
+Các giá trị bao gồm trực tiếp trong các mã nguồn được gọi là các *literals*. Kiểu `string` được bao quanh bởi ngoặc kép `"..."` hoặc ngoặc đơn (`'...'`) - Sự khác biệt duy nhất là phong cách ưu thích của từng người. Các kiểu `number` and `boolean` chỉ đại diện cho chính nó (ví dụ: `42`, `true`, ...).
 
-Consider:
+Xem xét:
 
 ```js
 "I am a string";
@@ -242,7 +242,8 @@ true;
 false;
 ```
 
-Beyond `string`/`number`/`boolean` value types, it's common for programming languages to provide *arrays*, *objects*, *functions*, and more. We'll cover much more about values and types throughout this chapter and the next.
+
+Ngoài các kiểu `string`/`number`/`boolean`, các ngôn ngữ lập trình còn cung cấp phổ biến các kiểu *arrays*, *objects*, *functions*, và nhiều hơn nữa. Chúng ta sẽ tìm hiểu về các kiểu và giá trị này trong các phần sau.
 
 ### Converting Between Types
 
