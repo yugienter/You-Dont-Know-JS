@@ -349,7 +349,7 @@ Những ngôn ngữ lập trình khác lại nhấn mạnh vào các kiểu cho 
 
 JavaScript có cách tiếp cận thứ hai, Kiểu động *dynamic typing*, nghĩa là variables có thể giữ giá trị của bất kỳ kiểu nào mà không cần cưỡng chế kiểu vào nó.
 
-Như đã đề cập trước đó, chúng ta khai báo variable sử dụng từ khoá `var` -- để ý là chúng ta không cần khai báo các thông tin về kiểu trong đó. Xem xét ví như đơn giản sau:
+Như đã đề cập trước đó, chúng ta khai báo variable sử dụng từ khoá `var` -- để ý là chúng ta không cần khai báo các thông tin về kiểu trong đó. Xem xét ví dụ đơn giản sau:
 
 ```js
 var amount = 99.99;
@@ -367,21 +367,21 @@ console.log( amount );		// "$199.98"
 
 Biến `amount` bắt đầu bằng việc nắm giữ giá trị của number `99.99`, và sau đó nắm giữ giá trị number của kết quả `amount * 2` là `199.98`.
 
-The first `console.log(..)` command has to *implicitly* coerce that `number` value to a `string` to print it out.
+Câu lệnh `console.log(..)` số một phải thực hiện coerce ngầm định đó là chuyển đổi `number` thành `string` để in ra.
 
-Then the statement `amount = "$" + String(amount)` *explicitly* coerces the `199.98` value to a `string` and adds a `"$"` character to the beginning. At this point, `amount` now holds the `string` value `"$199.98"`, so the second `console.log(..)` statement doesn't need to do any coercion to print it out.
+Sau đó câu lệnh `amount = "$" + String(amount)` sẽ trực tiếp coerce giá trị `199.98` thành một chuỗi và thêm vào ký tự `$` vào phía trước. Ở thời điểm này, biến `amount` nắm giữ chuỗi `"$199.98"`, do đó câu lệnh `console.log(...)` số hai khi kết quả ra, không cần thiết phải làm bất kỳ một coercion nào nữa.   
 
-JavaScript developers will note the flexibility of using the `amount` variable for each of the `99.99`, `199.98`, and the `"$199.98"` values. Static-typing enthusiasts would prefer a separate variable like `amountStr` to hold the final `"$199.98"` representation of the value, because it's a different type.
+JavaScript developers sẽ nhận thấy sự linh hoạt của việc sử dụng biến `amount` cho các giá trị `99.99`, `199.98` và cho chuỗi `"$199.98"`. Những người đam mê kiểu tĩnh *Static-typing* sẽ cần phải có thêm một biến độc lập kiểu như là `amountStr` để nắm giữ giá trị cuối cùng của chuỗi `"$199.98"` bởi vì kiểu của nó khác với kiểu trước.
 
-Either way, you'll note that `amount` holds a running value that changes over the course of the program, illustrating the primary purpose of variables: managing program *state*.
+Cách nào đi nữa, bạn cũng sẽ nhận thấy rằng biến `amount` nắm giữ một giá trị có sự thay đổi trong quá trình hoạt động của chương trình, nó minh hoạ cho mục đích chính của biến đó là: quản lý các *states* của chương trình.
 
-In other words, *state* is tracking the changes to values as your program runs.
+Hay nói cách khác, *states* theo dõi những sự thay đổi của giá trị khi chương trình hoạt động.
 
-Another common usage of variables is for centralizing value setting. This is more typically called *constants*, when you declare a variable with a value and intend for that value to *not change* throughout the program.
+Một cách sử dụng phổ biến khác của biến là sự thiết lập giá trị trung tâm. Nó thường được gọi là hằng số *constants*, đó là khi bạn khai báo một biến với một giá trị nào đó và không có ý định thay đổi giá trị của nó trong toàn bộ chương trình.
 
-You declare these *constants*, often at the top of a program, so that it's convenient for you to have one place to go to alter a value if you need to. By convention, JavaScript variables as constants are usually capitalized, with underscores `_` between multiple words.
+Bạn khai báo các hằng số *constants* thông thường ở phía trên cùng của chương trình, việc này cũng thuận tiện cho bạn nếu bạn muốn gán cho nó một giá trị khác. Theo quy ước, trong JavaScript các hằng số thường được viết hoa và có dấu gạch chân `_` ở giữa các từ.
 
-Here's a silly example:
+Sau đây là một ví dụ hơi ngu ngơ:
 
 ```js
 var TAX_RATE = 0.08;	// 8% sales tax
