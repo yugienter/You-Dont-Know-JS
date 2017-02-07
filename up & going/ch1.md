@@ -396,11 +396,11 @@ console.log( amount );				// 215.9784
 console.log( amount.toFixed( 2 ) );	// "215.98"
 ```
 
-**Note:** Similar to how `console.log(..)` is a function `log(..)` accessed as an object property on the `console` value, `toFixed(..)` here is a function that can be accessed on `number` values. JavaScript `number`s aren't automatically formatted for dollars -- the engine doesn't know what your intent is and there's no type for currency. `toFixed(..)` lets us specify how many decimal places we'd like the `number` rounded to, and it produces the `string` as necessary.
+**Note:** Tương tự như trong `console.log(..)` hàm `log(..)` được gọi đến như là một object property từ `console`, thì hàm `toFixed(..)` ở đây cũng là một object property của `number`. Trong JavaScript, `number` không được gán cho đơn vị tiền tệ -- engine của Javascript không biết được ý định của bạn là gì và cũng không có loại định dạng cho tiền tệ. Cho nên hàm `toFixed(..)` giúp chúng ta xác định có bao nhiêu chữ số ở phần thập phân, và nó cũng tạo ra kiểu chuỗi `string` nếu cần thiết.  
 
-The `TAX_RATE` variable is only *constant* by convention -- there's nothing special in this program that prevents it from being changed. But if the city raises the sales tax rate to 9%, we can still easily update our program by setting the `TAX_RATE` assigned value to `0.09` in one place, instead of finding many occurrences of the value `0.08` strewn throughout the program and updating all of them.
+Biến `TAX_RATE` được xem là hằng số *constant* theo quy ước -- không có điều kiện áp đặt nào trong chương trình ngăn nó không được thay đổi. Nhưng nếu như chính quyền thành phố tăng thuế bán hàng lên thành 9%, chúng ta cũng có thể dễ dàng thay đổi chương trình của chúng ta bằng cách đặt lại giá trị của `TAX_RATE` thành `0.09` ở ngay đầu chương trình mà không phải tìm kiếm nhiều lần xuất hiện của giá trị `0.08` rải rác trong suốt chương trình và cập nhật tất cả chúng.
 
-The newest version of JavaScript at the time of this writing (commonly called "ES6") includes a new way to declare *constants*, by using `const` instead of `var`:
+Phiên bản mới nhất của JavaScript ở thời điểm viết (thường được gọi là "ES6") có kèm thêm một cách mới để khai báo các hàng số bằng cách sử dụng từ khoá `const` thay cho từ khoá `var`:
 
 ```js
 // as of ES6:
@@ -411,17 +411,17 @@ var amount = 99.99;
 // ..
 ```
 
-Constants are useful just like variables with unchanged values, except that constants also prevent accidentally changing value somewhere else after the initial setting. If you tried to assign any different value to `TAX_RATE` after that first declaration, your program would reject the change (and in strict mode, fail with an error -- see "Strict Mode" in Chapter 2).
+Hằng số có giá trị sử dụng giống như là các biến với giá trị không đổi, ngoại trừ việc hằng số ngăn không cho nó vô tình bị thay đổi ở một đoạn code nào đó trong chương trình, sau khi đã được gán giá trị ban đầu. Nếu bạn cố thay gán một giá trị khác cho `TAX_RATE` sau khi bạn đã khai báo nó, chương trình của bạn sẽ từ chối các thay đổi đó (và trong những chế độ cài đặt nghiêm ngặt, nó sẽ phát sinh lỗi -- xem thêm phần "Strict Mode" trong Chương 2).
 
-By the way, that kind of "protection" against mistakes is similar to the static-typing type enforcement, so you can see why static types in other languages can be attractive!
+Bằng cách này, việc "bảo vệ" sự vô tình thay đổi giá trị của hằng số sẽ tương tự như việc thực thi của kiểu tĩnh (Static-typing), đó cũng là một lý do hấp dẫn của kiểu tĩnh trong những ngôn ngữ khác!
 
-**Note:** For more information about how different values in variables can be used in your programs, see the *Types & Grammar* title of this series.
+**Note:** Để biết thêm thông tin về cách sử dụng các giá trị khác nhau của biến trong chương trình, bạn có thể xem thêm phần *Type & Grammar* trong series sách này.
 
 ## Blocks
 
-The phone store employee must go through a series of steps to complete the checkout as you buy your new phone.
+Nhân viên cửa hàng điện thoại phải đi qua rất nhiều bước để hoàn thành việc thanh toán khi bạn mua điện thoại của họ.
 
-Similarly, in code we often need to group a series of statements together, which we often call a *block*. In JavaScript, a block is defined by wrapping one or more statements inside a curly-brace pair `{ .. }`. Consider:
+Tương tự như vậy, trong lập trình chúng ta thường cần một nhóm các series chứa các câu lệnh đi cùng với nhau, mà chúng ta thường gọi là *block*. Trong JavaScript, một block được xác định bằng cách gói một hoặc nhiều câu lệnh bên trong một cặp ngoặc đơn `{ .. }`. Xem xét ví dụ sau:
 
 ```js
 var amount = 99.99;
@@ -432,8 +432,7 @@ var amount = 99.99;
 	console.log( amount );	// 199.98
 }
 ```
-
-This kind of standalone `{ .. }` general block is valid, but isn't as commonly seen in JS programs. Typically, blocks are attached to some other control statement, such as an `if` statement (see "Conditionals") or a loop (see "Loops"). For example:
+Kiẻu cặp ngoặc đơn `{ .. }` đứng một mình như thế này hoàn toàn hợp lệ, nhưng nó không thường được sử dụng trong JavaScript. Thông thường, block được sử dụng trong các câu lệnh điều khiểu, ví dụ như `if` (Xem thêm phần "Conditionals") hoặc vòng lặp (Xem thêm phần "Loops"). Ví dụ như:
 
 ```js
 var amount = 99.99;
@@ -445,9 +444,9 @@ if (amount > 10) {			// <-- block attached to `if`
 }
 ```
 
-We'll explain `if` statements in the next section, but as you can see, the `{ .. }` block with its two statements is attached to `if (amount > 10)`; the statements inside the block will only be processed if the conditional passes.
+Chúng ta sẽ giải thích câu lệnh `if` trong những phần tới, nhưng bạn có thể thấy, cặp ngoặc đơn `{ .. }` chứa 2 câu lệnh trong đó, được gắn với phần điều kiện `if (amount > 10)`; Các câu lệnh bên trong khối đó chỉ được xử lý nếu điều kiện đó xảy ra.
 
-**Note:** Unlike most other statements like `console.log(amount);`, a block statement does not need a semicolon (`;`) to conclude it.
+**Note:** Không giống như những câu lệnh khác, kiểu như `console.log(amount);`, một block không cần phải có dấm chấm phẩy cuối câu.
 
 ## Conditionals
 
