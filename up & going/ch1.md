@@ -432,7 +432,7 @@ var amount = 99.99;
 	console.log( amount );	// 199.98
 }
 ```
-Kiẻu cặp ngoặc đơn `{ .. }` đứng một mình như thế này hoàn toàn hợp lệ, nhưng nó không thường được sử dụng trong JavaScript. Thông thường, block được sử dụng trong các câu lệnh điều khiểu, ví dụ như `if` (Xem thêm phần "Conditionals") hoặc vòng lặp (Xem thêm phần "Loops"). Ví dụ như:
+Cách dùng cặp ngoặc đơn `{ .. }` đứng một mình như thế này hoàn toàn hợp lệ, nhưng nó không thường được sử dụng trong JavaScript. Thông thường, block được sử dụng trong các câu lệnh điều khiểu, ví dụ như `if` (Xem thêm phần "Conditionals") hoặc vòng lặp (Xem thêm phần "Loops"). Ví dụ như:
 
 ```js
 var amount = 99.99;
@@ -446,7 +446,7 @@ if (amount > 10) {			// <-- block attached to `if`
 
 Chúng ta sẽ giải thích câu lệnh `if` trong những phần tới, nhưng bạn có thể thấy, cặp ngoặc đơn `{ .. }` chứa 2 câu lệnh trong đó, được gắn với phần điều kiện `if (amount > 10)`; Các câu lệnh bên trong khối đó chỉ được xử lý nếu điều kiện đó xảy ra.
 
-**Note:** Không giống như những câu lệnh khác, kiểu như `console.log(amount);`, một block không cần phải có dấm chấm phẩy cuối câu.
+**Note:** Không giống như những câu lệnh khác, kiểu như `console.log(amount);`, một block không cần phải có dấu chấm phẩy cuối câu.
 
 ## Conditionals
 
