@@ -421,7 +421,7 @@ Bằng cách này, việc "bảo vệ" sự vô tình thay đổi giá trị c�
 
 Nhân viên cửa hàng điện thoại phải đi qua rất nhiều bước để hoàn thành việc thanh toán khi bạn mua điện thoại của họ.
 
-Tương tự như vậy, trong lập trình chúng ta thường cần một nhóm các series chứa các câu lệnh đi cùng với nhau, mà chúng ta thường gọi là *block*. Trong JavaScript, một block được xác định bằng cách gói một hoặc nhiều câu lệnh bên trong một cặp ngoặc đơn `{ .. }`. Xem xét ví dụ sau:
+Tương tự như vậy, trong lập trình chúng ta thường cần một nhóm các series chứa các câu lệnh đi cùng với nhau, mà chúng ta thường gọi là *block*. Trong JavaScript, một block được xác định bằng cách gói một hoặc nhiều câu lệnh bên trong một cặp móc đơn `{ .. }`. Xem xét ví dụ sau:
 
 ```js
 var amount = 99.99;
@@ -432,7 +432,7 @@ var amount = 99.99;
 	console.log( amount );	// 199.98
 }
 ```
-Cách dùng cặp ngoặc đơn `{ .. }` đứng một mình như thế này hoàn toàn hợp lệ, nhưng nó không thường được sử dụng trong JavaScript. Thông thường, block được sử dụng trong các câu lệnh điều khiểu, ví dụ như `if` (Xem thêm phần "Conditionals") hoặc vòng lặp (Xem thêm phần "Loops"). Ví dụ như:
+Cách dùng cặp móc đơn `{ .. }` đứng một mình như thế này hoàn toàn hợp lệ, nhưng nó không thường được sử dụng trong JavaScript. Thông thường, block được sử dụng trong các câu lệnh điều khiểu, ví dụ như `if` (Xem thêm phần "Conditionals") hoặc vòng lặp (Xem thêm phần "Loops"). Ví dụ như:
 
 ```js
 var amount = 99.99;
@@ -444,17 +444,17 @@ if (amount > 10) {			// <-- block attached to `if`
 }
 ```
 
-Chúng ta sẽ giải thích câu lệnh `if` trong những phần tới, nhưng bạn có thể thấy, cặp ngoặc đơn `{ .. }` chứa 2 câu lệnh trong đó, được gắn với phần điều kiện `if (amount > 10)`; Các câu lệnh bên trong khối đó chỉ được xử lý nếu điều kiện đó xảy ra.
+Chúng ta sẽ giải thích câu lệnh `if` trong những phần tới, nhưng bạn có thể thấy, cặp móc đơn `{ .. }` chứa 2 câu lệnh trong đó, được gắn với phần điều kiện `if (amount > 10)`; Các câu lệnh bên trong khối đó chỉ được xử lý nếu điều kiện đó xảy ra.
 
 **Note:** Không giống như những câu lệnh khác, kiểu như `console.log(amount);`, một block không cần phải có dấu chấm phẩy cuối câu.
 
-## Conditionals
+## Điều kiện (Conditionals)
 
-"Do you want to add on the extra screen protectors to your purchase, for $9.99?" The helpful phone store employee has asked you to make a decision. And you may need to first consult the current *state* of your wallet or bank account to answer that question. But obviously, this is just a simple "yes or no" question.
+"Bạn có muốn mua thêm tấm bảo vệ màn hình giá $9.99 không?" Những nhân viên cửa hàng đang yêu cầu bạn thực hiện một quyết định. Và điều đầu tiên bạn cần phải tham khảo trạng thái (state) của chiếc ví hoặc tài khoản ngân hàng để có thể trả lời cho câu hỏi đó. Nhưng rõ ràng, đây đơn giản chỉ là câu hỏi "có hoặc không" mà thôi.
 
-There are quite a few ways we can express *conditionals* (aka decisions) in our programs.
+Có khá nhiều cách để chúng ta có thể diễn tả các điều kiện - conditionals aka quyết định - trong chương trình của chúng ta.
 
-The most common one is the `if` statement. Essentially, you're saying, "*If* this condition is true, do the following...". For example:
+Phổ biến nhất là câu lệnh `if`. Về cơ bản, bạn đang nói: "Nếu điều này xảy ra thì làm những thứ sau". Ví dụ:
 
 ```js
 var bank_balance = 302.13;
@@ -465,9 +465,9 @@ if (amount < bank_balance) {
 }
 ```
 
-The `if` statement requires an expression in between the parentheses `( )` that can be treated as either `true` or `false`. In this program, we provided the expression `amount < bank_balance`, which indeed will either evaluate to `true` or `false` depending on the amount in the `bank_balance` variable.
+Câu lệnh `if` đòi hỏi một biểu thức để trong ngoặc đơn `()` mà trạng thái của nó chỉ có thể là `true` hoặc `false`. Trong chương trình trên, chúng ta cung cấp điều kiện `amount < bank_balance`, và nó sẽ mang giá trị `true` hoặc `false` tuỳ thuộc vào giá trị của biến `bank_balance`.
 
-You can even provide an alternative if the condition isn't true, called an `else` clause. Consider:
+Ngoài ra bạn có thể cung cấp một sự thay thế trong trường hợp điều kiện đưa ra là không đúng, đó là vế lệnh `else`. Xem xét:
 
 ```js
 const ACCESSORY_PRICE = 9.99;
