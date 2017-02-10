@@ -467,7 +467,7 @@ if (amount < bank_balance) {
 
 Câu lệnh `if` đòi hỏi một biểu thức để trong ngoặc đơn `()` mà trạng thái của nó chỉ có thể là `true` hoặc `false`. Trong chương trình trên, chúng ta cung cấp điều kiện `amount < bank_balance`, và nó sẽ mang giá trị `true` hoặc `false` tuỳ thuộc vào giá trị của biến `bank_balance`.
 
-Ngoài ra bạn có thể cung cấp một sự thay thế trong trường hợp điều kiện đưa ra là không đúng, đó là vế lệnh `else`. Xem xét:
+Ngoài ra bạn có thể cung cấp thêm một sự thay thế trong trường hợp điều kiện đưa ra là không đúng, đó là vế lệnh `else`. Xem xét:
 
 ```js
 const ACCESSORY_PRICE = 9.99;
@@ -487,26 +487,25 @@ else {
 	console.log( "No, thanks." );
 }
 ```
+Ở đây, nếu mệnh đề `amount < bank_balance` là `true`, chúng ta sẽ in ra màn hình câu `"I'll take the accessory!"` và cộng thêm `9.99` vào biến `amount`. Nếu không thì vế lệnh `else` sẽ lịch sự trả lời `"No, thanks."` và không thay đổi biến `amount`.
 
-Here, if `amount < bank_balance` is `true`, we'll print out `"I'll take the accessory!"` and add the `9.99` to our `amount` variable. Otherwise, the `else` clause says we'll just politely respond with `"No, thanks."` and leave `amount` unchanged.
+Như chúng ta đã thảo luận trong phần "Values & Types" trước đó, những giá trị không được khai báo kiểu trước đó sẽ thường được coerce đến kiểu được mong đợi. Mệnh đề `if` mong muốn một kiểu `boolean`, nhưng nếu như bạn đưa vào một kiểu không phải là `boolean` thì coerce sẽ xảy ra.
 
-As we discussed in "Values & Types" earlier, values that aren't already of an expected type are often coerced to that type. The `if` statement expects a `boolean`, but if you pass it something that's not already `boolean`, coercion will occur.
+JavaScript định nghĩa một danh sách các giá trị cụ thể gọi là "falsy" bởi vì khi bị coerce sang kiểu `boolean`, chúng sẽ trở thành `false` -- danh sách đó bao gồm những giá trị như `0` và `""`. Bất kỳ giá trị khác không nằm trong danh sách "falsy" sẽ được tự động "truthy" -- nghĩa là khi coerce sang kiểu `boolean` chúng sẽ trở thành `true`. Các giá trị truthy bao gồm những giá trị kiểu như `99.99` và `"free"`. Xem thêm mục "Truthy & Falsy" trong chương 2.
 
-JavaScript defines a list of specific values that are considered "falsy" because when coerced to a `boolean`, they become `false` -- these include values like `0` and `""`. Any other value not on the "falsy" list is automatically "truthy" -- when coerced to a `boolean` they become `true`. Truthy values include things like `99.99` and `"free"`. See "Truthy & Falsy" in Chapter 2 for more information.
+*Conditionals* tồn tại dưới nhiều hình thức khác ngoài `if`. Ví dụ như `switch`, câu lệnh được dùng như là một cách viết tắt cho một loại các mệnh đề `if..else`(xem thêm Chương 2). Vòng lặp Loops (Xem thêm Loops) dùng một mệnh đề điều kiện để quyết định xem vòng lặp loop nên tiếp tục hay dừng lại.
 
-*Conditionals* exist in other forms besides the `if`. For example, the `switch` statement can be used as a shorthand for a series of `if..else` statements (see Chapter 2). Loops (see "Loops") use a *conditional* to determine if the loop should keep going or stop.
+**Note:** Để tìm hiểu sâu hơn về coercions có thể ngầm xảy ra trong các biểu thức kiểm tra điều kiện của các *conditionals*, xem thêm Chương 4 của cuốn *Types & Grammar*.  
 
-**Note:** For deeper information about the coercions that can occur implicitly in the test expressions of *conditionals*, see Chapter 4 of the *Types & Grammar* title of this series.
+## Vòng lặp (Loops)
 
-## Loops
+Trong những lúc bận rộn, thông thường có một danh sách khách hàng, những người chờ đợi để nói chuyện với nhân viên cửa hàng điện thoại. Trong khi vẫn có những người chờ đợi trong danh sách đó, nhân viên cửa hàng chỉ cần tiếp tục phục vụ những khách hàng tiếp theo.
 
-During busy times, there's a waiting list for customers who need to speak to the phone store employee. While there's still people on that list, she just needs to keep serving the next customer.
+Lặp đi lặp lại một tập hợp các hành động cho đến khi một điều kiện đặt ra trở thành sai -- nói một cách khác, lặp lại hành động trong khi điều kiện vẫn đang đúng -- là công việc của vòng lặp loops; Vòng lặp loop có thể có nhiều hình thức khác nhau , nhưng tất cả đều đáp ứng hành vi cơ bản này.
 
-Repeating a set of actions until a certain condition fails -- in other words, repeating only while the condition holds -- is the job of programming loops; loops can take different forms, but they all satisfy this basic behavior.
+Một vòng lặp bao gồm các điều kiện kiểm tra, là một khối lệnh (thường là `{ .. }`). Mỗi lần khối lệnh được thực hiện là một lần lặp lại -- *iteration*.
 
-A loop includes the test condition as well as a block (typically as `{ .. }`). Each time the loop block executes, that's called an *iteration*.
-
-For example, the `while` loop and the `do..while` loop forms illustrate the concept of repeating a block of statements until a condition no longer evaluates to `true`:
+Ví dụ, vòng lặp `while` và vòng lặp `do..while` minh hoạ cho khái niệm lặp đi lặp lại một khối lệnh cho đến khi điều kiện không còn đúng nữa.
 
 ```js
 while (numOfCustomers > 0) {
@@ -528,13 +527,13 @@ do {
 } while (numOfCustomers > 0);
 ```
 
-The only practical difference between these loops is whether the conditional is tested before the first iteration (`while`) or after the first iteration (`do..while`).
+Sự khác biệt thực tế duy nhất giữa các vòng lặp ở trên là điều kiện được kiểm tra trước vòng lặp đầu tiên (ở vòng lặp `while`) hay sau khi chạy vòng lặp đầu tiên (ở vòng lặp `do..while`).
 
-In either form, if the conditional tests as `false`, the next iteration will not run. That means if the condition is initially `false`, a `while` loop will never run, but a `do..while` loop will run just the first time.
+Trong cả 2 hình thức, nếu điều kiện kiểm tra là `false` thì vòng chạy kế tiếp sẽ không xảy ra. Có nghĩa là nếu điều kiện ban đầu `false`, một vòng lặp `while` sẽ không bao giờ chạy, nhưng một vòng lặp `do..while` sẽ chỉ chạy MỘT lần đầu.
 
-Sometimes you are looping for the intended purpose of counting a certain set of numbers, like from `0` to `9` (ten numbers). You can do that by setting a loop iteration variable like `i` at value `0` and incrementing it by `1` each iteration.
+Đôi khi bạn đang thực hiện vòng lặp cho mục đích đếm một tập hơp các con số, ví dụ như từ `0` đến `9` (gồm 10 số). Bạn có thể làm điều đó bằng cách thiết lập một biến trong vòng lặp gọi là `i` có giá trị `0` và cộng thêm `1` qua mỗi vòng lặp.
 
-**Warning:** For a variety of historical reasons, programming languages almost always count things in a zero-based fashion, meaning starting with `0` instead of `1`. If you're not familiar with that mode of thinking, it can be quite confusing at first. Take some time to practice counting starting with `0` to become more comfortable with it!
+**Warning:** Vì nhiều lý do lịch sử, ngôn ngữ lập trình thường được đếm theo phong cách zero-based, có nghĩa là bắt đầu đếm từ `0` thay vì từ `1`. Nếu bạn không quen thuộc với điều đó trong cách nghĩ thì nó có thể gây cho bạn sự khó hiểu lúc đầu. Bạn chỉ cần thời gian thực hành để trở nên thoải mái hơn với việc đếm từ số `0`. 
 
 The conditional is tested on each iteration, much as if there is an implied `if` statement inside the loop.
 
