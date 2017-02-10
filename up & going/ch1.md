@@ -533,13 +533,13 @@ Trong cả 2 hình thức, nếu điều kiện kiểm tra là `false` thì vòn
 
 Đôi khi bạn đang thực hiện vòng lặp cho mục đích đếm một tập hơp các con số, ví dụ như từ `0` đến `9` (gồm 10 số). Bạn có thể làm điều đó bằng cách thiết lập một biến trong vòng lặp gọi là `i` có giá trị `0` và cộng thêm `1` qua mỗi vòng lặp.
 
-**Warning:** Vì nhiều lý do lịch sử, ngôn ngữ lập trình thường được đếm theo phong cách zero-based, có nghĩa là bắt đầu đếm từ `0` thay vì từ `1`. Nếu bạn không quen thuộc với điều đó trong cách nghĩ thì nó có thể gây cho bạn sự khó hiểu lúc đầu. Bạn chỉ cần thời gian thực hành để trở nên thoải mái hơn với việc đếm từ số `0`. 
+**Warning:** Vì nhiều lý do lịch sử, ngôn ngữ lập trình thường được đếm theo phong cách zero-based, có nghĩa là bắt đầu đếm từ `0` thay vì từ `1`. Nếu bạn không quen thuộc với điều đó trong cách nghĩ thì nó có thể gây cho bạn sự khó hiểu lúc đầu. Bạn chỉ cần thời gian thực hành để trở nên thoải mái hơn với việc đếm từ số `0`.
 
-The conditional is tested on each iteration, much as if there is an implied `if` statement inside the loop.
+Mệnh đề điều kiện đều được kiểm tra trên mỗi lần lặp, giống như có một ngụ ý `if` bên trong mỗi vòng lặp.
 
-We can use JavaScript's `break` statement to stop a loop. Also, we can observe that it's awfully easy to create a loop that would otherwise run forever without a `break`ing mechanism.
+Trong JavaScript, chúng ta có thể sử dụng từ khoá `break` để dừng một vòng lặp. Ngoài ra chúng ta có thể thấy rất dễ để tạo ra một vòng lặp vô cùng, nó sẽ chạy vĩnh viễn mà không có một cơ chế để dừng lại.
 
-Let's illustrate:
+Xem ví dụ minh hoạ sau:
 
 ```js
 var i = 0;
@@ -557,9 +557,9 @@ while (true) {
 // 0 1 2 3 4 5 6 7 8 9
 ```
 
-**Warning:** This is not necessarily a practical form you'd want to use for your loops. It's presented here for illustration purposes only.
+**Warning:** Bạn không nhất thiết phải thực hành vòng lặp này. Nó được trình bảy ở đây chỉ mang tính chất minh hoạ.
 
-While a `while` (or `do..while`) can accomplish the task manually, there's another syntactic form called a `for` loop for just that purpose:
+Trong khi một vòng lặp `while` (hoặc `do..while`) thực hiện tuần tự các công việc một cách thủ công, thì có một cú pháp khác được tạo ra để cho mục đích đó, gọi là vòng lặp `for`.  
 
 ```js
 for (var i = 0; i <= 9; i = i + 1) {
@@ -568,19 +568,19 @@ for (var i = 0; i <= 9; i = i + 1) {
 // 0 1 2 3 4 5 6 7 8 9
 ```
 
-As you can see, in both cases the conditional `i <= 9` is `true` for the first 10 iterations (`i` of values `0` through `9`) of either loop form, but becomes `false` once `i` is value `10`.
+Như bạn thấy, trong cả 2 trường hợp thì điều kiện `i <= 9` là đúng cho 10 vòng lặp đầu tiên (giá trị của `i` chạy từ `0` đến `9`), và sẽ trở thành `false` khi giá trị của `i` là `10`.
 
-The `for` loop has three clauses: the initialization clause (`var i=0`), the conditional test clause (`i <= 9`), and the update clause (`i = i + 1`). So if you're going to do counting with your loop iterations, `for` is a more compact and often easier form to understand and write.
+Vòng lặp `for` có 3 mệnh đề: mệnh đề khởi tạo (`var i = 0`), mệnh đề kiểm tra điều kiện (`i <= 9`), và mệnh đề cập nhật (`i = i + 1`). Vì vậy, nếu bạn đang thực hiện các thuật toán đếm với vòng lặp, câu lệnh `for` thường gọn nhẹ và dễ dàng hơn trong việc đọc hiểu.
 
-There are other specialized loop forms that are intended to iterate over specific values, such as the properties of an object (see Chapter 2) where the implied conditional test is just whether all the properties have been processed. The "loop until a condition fails" concept holds no matter what the form of the loop.
+Có nhiều hình thức lặp đặc biệt khác được dùng cho những giá trị đặc biệt, ví dụ như các thuộc tính của đối tượng (Xem thêm Chương 2), đó là khi mà điều kiện được hiểu là tất cả các thuộc tính của đối tượng đã được xử lý. Khái niệm "Lặp cho đến khi điều kiện không còn đúng" vẫn giữ nguyên ý nghĩa của nó trong bất kỳ hình thức nào của vòng lặp.
 
-## Functions
+## Hàm (Functions)
 
-The phone store employee probably doesn't carry around a calculator to figure out the taxes and final purchase amount. That's a task she needs to define once and reuse over and over again. Odds are, the company has a checkout register (computer, tablet, etc.) with those "functions" built in.
+Các nhân viên cửa hàng điện thoại không cần mang theo mình một cái máy tính để tìm ra các loại thuế và tính toán số tiền thực trả của khách hàng. Đó là một công việc mà họ phải làm một lần và sử dụng lại nhiều lần sau đó. Thực tế là công ty có các phương tiện thanh toán (máy tính, tablet ...) với những chức năng đó đã được cài sẵn.
 
-Similarly, your program will almost certainly want to break up the code's tasks into reusable pieces, instead of repeatedly repeating yourself repetitiously (pun intended!). The way to do this is to define a `function`.
+Tương tự như vậy, chương trình của bạn gần như chắc chắn sẽ được chia thành các phần khác nhau và được tái sử dụng, thay vì liên tục lặp đi lặp lại chính nó (Ngộ chữ!). Cách để làm điều đó chính là định nghĩa các hàm -- `function`.
 
-A function is generally a named section of code that can be "called" by name, and the code inside it will be run each time. Consider:
+Một hàm, nói chung là một đoạn mã được đặt tên và có thể được "gọi" theo tên của nó, và các đoạn code bên trong nó sẽ được chạy mỗi lần được gọi. Xem xét ví dụ sau:
 
 ```js
 function printAmount() {
@@ -596,7 +596,7 @@ amount = amount * 2;
 printAmount(); // "199.98"
 ```
 
-Functions can optionally take arguments (aka parameters) -- values you pass in. And they can also optionally return a value back.
+Hàm có thể được đưa vào các tham số (được gọi là các parameters) -- chính là giá trị mà bạn muốn truyền vào. Và bạn cũng có thể tuỳ chọn giá trị trả về của hàm.
 
 ```js
 function printAmount(amt) {
@@ -615,11 +615,11 @@ amount = formatAmount();
 console.log( amount );			// "$99.99"
 ```
 
-The function `printAmount(..)` takes a parameter that we call `amt`. The function `formatAmount()` returns a value. Of course, you can also combine those two techniques in the same function.
+Hàm `printAmount(..)` nhận một tham số đầu vào mà chúng ta gọi là `amt`. Hàm `formatAmount()` trả lại một giá trị. Tất nhiên bạn cũng có thể nhóm 2 hành động đó lại thành một hàm duy nhất.
 
-Functions are often used for code that you plan to call multiple times, but they can also be useful just to organize related bits of code into named collections, even if you only plan to call them once.
+Các hàm số thường được sử dụng cho các đoạn code mà bạn muốn sử dụng nhiều lần, nhưng nó cũng rất hữu ích khi bạn muốn sắp xếp các đoạn code lại trong các tên gọi cụ thể tuy rằng bạn chỉ dùng nó 1 lần duy nhất.
 
-Consider:
+Xem xét ví dụ:
 
 ```js
 const TAX_RATE = 0.08;
@@ -639,25 +639,27 @@ amount = calculateFinalPurchaseAmount( amount );
 console.log( amount.toFixed( 2 ) );		// "107.99"
 ```
 
-Although `calculateFinalPurchaseAmount(..)` is only called once, organizing its behavior into a separate named function makes the code that uses its logic (the `amount = calculateFinal...` statement) cleaner. If the function had more statements in it, the benefits would be even more pronounced.
+Mặc dù hàm `calculateFinalPurchaseAmount(..)` chỉ được gọi một lần, nhưng cách nhóm chúng lại thành một nhóm với tên gọi riêng biệt làm cho đoạn code (với câu lệnh `amount = calculateFinal...`) có tính logic hơn. Bạn sẽ thấy lợi ích rõ rệt hơn nếu hàm số có chứa nhiều câu lệnh trong đó.
 
 ### Scope
 
-If you ask the phone store employee for a phone model that her store doesn't carry, she will not be able to sell you the phone you want. She only has access to the phones in her store's inventory. You'll have to try another store to see if you can find the phone you're looking for.
+Nếu bạn hỏi nhân viên cửa hàng điện thoại về một model điện thoại mà cửa hàng không có, nhân viên sẽ không thể bán cho bạn model đó. Họ chỉ có thể chỉ cho bạn các model mà cửa hàng có mà thôi. Bạn sẽ phải tìm kiếm nó ở các cửa hàng khác.
 
-Programming has a term for this concept: *scope* (technically called *lexical scope*). In JavaScript, each function gets its own scope. Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's *scoped* variables.
+Lập trình có một khái niệm mô tả điều này được gọi là: *scope* (Khái niệm kỹ thuật gọi là *lexical scope*). Trong JavaScript, mỗi một hàm số có một scope riêng của nó. Scope về cơ bản là một bộ sưu tập các biến và các quy tắc để truy cập vào các biến đó bằng tên của nó. Chỉ có các đoạn code bên trong một hàm mới có thể truy cập vào được scope của hàm đó.
 
-A variable name has to be unique within the same scope -- there can't be two different `a` variables sitting right next to each other. But the same variable name `a` could appear in different scopes.
+Tên của một biến phải là duy nhất trong một scope -- Không thể có 2 biến `a` ngồi bên cạnh nhau được. Nhưng các biến có cùng tên `a` có thể xuất hiện trong các scope khác nhau.
 
 ```js
 function one() {
 	// this `a` only belongs to the `one()` function
+  // biến `a` này chỉ thuộc về hàm one()
 	var a = 1;
 	console.log( a );
 }
 
 function two() {
 	// this `a` only belongs to the `two()` function
+  // biến `a`này chỉ thuộc về hàm two()
 	var a = 2;
 	console.log( a );
 }
@@ -666,9 +668,9 @@ one();		// 1
 two();		// 2
 ```
 
-Also, a scope can be nested inside another scope, just like if a clown at a birthday party blows up one balloon inside another balloon. If one scope is nested inside another, code inside the innermost scope can access variables from either scope.
+Ngoài ra, một scope có thể được lồng vào trong một scope khác, giống như một quả bóng bay được thổi lồng vào bên trong một quả bóng bay khác. Nếu như một scope được lồng vào bên trong một scope khác, thì đoạn code bên trong cùng có thể truy cập vào các biến ở cả 2 scope.
 
-Consider:
+Xem xét:
 
 ```js
 function outer() {
@@ -678,23 +680,25 @@ function outer() {
 		var b = 2;
 
 		// we can access both `a` and `b` here
+    // Chúng ta có thể truy cập cả `a` và `b` từ đây
 		console.log( a + b );	// 3
 	}
 
 	inner();
 
 	// we can only access `a` here
+  // Chúng ta chỉ có thể truy cập được `a` từ đây
 	console.log( a );			// 1
 }
 
 outer();
 ```
 
-Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it.
+Các quy định về scope nói rằng đoạn code bên trong một scope có thể truy cập được các biến nằm trong scope đó hoặc các biến nằm ở các scope bao bên ngoài nó.
 
-So, code inside the `inner()` function has access to both variables `a` and `b`, but code in `outer()` has access only to `a` -- it cannot access `b` because that variable is only inside `inner()`.
+Vì vậy, các đoạn code bên trong hàm `inner()` có thể truy cập được cả hai biến `a` và `b`, nhưng đoạn code ở trong hàm `outer()` chỉ có thể truy cập được biến `a` -- nó KHÔNG thể truy cập được biến `b` bởi vì biến `b` nằm bên trong hàm `inner()`.
 
-Recall this code snippet from earlier:
+Xem lại đoạn mã trước đó:
 
 ```js
 const TAX_RATE = 0.08;
@@ -707,21 +711,20 @@ function calculateFinalPurchaseAmount(amt) {
 	return amt;
 }
 ```
+Hằng số (nên nhớ hằng số cũng là một biến) `TAX_RATE` có thể được truy cập từ bên trong hàm `calculateFinalPurchaseAmount(..)` mặc dù chúng ta không truyền nó vào bên trong, nhưng chính định nghĩa của scope đã giúp ta làm điều đó.
 
-The `TAX_RATE` constant (variable) is accessible from inside the `calculateFinalPurchaseAmount(..)` function, even though we didn't pass it in, because of lexical scope.
+**Note:** Để biết thêm thông tin về lexical scope, xem thêm 3 chương đầu của cuốn *Scope & Closures* trong series này.
 
-**Note:** For more information about lexical scope, see the first three chapters of the *Scope & Closures* title of this series.
+## Thực hành - Practice
 
-## Practice
+Hoàn toàn không có sự thay thế cho thực hành trong việc học lập trình. Không có cách nào để giúp bạn chỉ học vẹt những đoạn lý thuyết của tôi mà trở thành một lập trình viên được.
 
-There is absolutely no substitute for practice in learning programming. No amount of articulate writing on my part is alone going to make you a programmer.
+Với suy nghĩ đó, chúng ta hãy cố gắng thực hành một số khái niệm chúng ta đã học đuọc trong chương này. Tôi sẽ cung cấp cho bạn các "yêu cầu" và bạn cố gắng với nó trước. Sau đó tham khảo các đoạn code bên dưới để xem cách tôi tiếp cận với nó nhé.
 
-With that in mind, let's try practicing some of the concepts we learned here in this chapter. I'll give the "requirements," and you try it first. Then consult the code listing below to see how I approached it.
-
-* Write a program to calculate the total price of your phone purchase. You will keep purchasing phones (hint: loop!) until you run out of money in your bank account. You'll also buy accessories for each phone as long as your purchase amount is below your mental spending threshold.
-* After you've calculated your purchase amount, add in the tax, then print out the calculated purchase amount, properly formatted.
-* Finally, check the amount against your bank account balance to see if you can afford it or not.
-* You should set up some constants for the "tax rate," "phone price," "accessory price," and "spending threshold," as well as a variable for your "bank account balance.""
+* Viết một chương trình tính toán tổng giá mua điện thoại của bạn. Bạn sẽ mua điện thoại liên tục cho đến khi bạn hết tiền (Gợi ý: vòng lặp loop!). Bạn cũng sẽ mua phụ kiện cho mỗi một chiếc điện thoại miễn là số tiền phải trả thấp hơn mức chi tiêu dự định của bạn.
+* Sau khi bạn đã tính toán số tiền mua hàng của bạn, thêm thuế phải trả vào, sau đó in ra số tiền mua hàng đã được tính toán và định dạng đầy đủ.
+* Cuối cùng, kiểm tra lại số tiền phải trả với số dư tài khoản ngân hàng để xem thử bạn có đủ khả năng chi trả hay không?
+* Bạn nên thiết lập hằng số cho "thuế suất", "giá điện thoại", "giá phụ kiện", và "mức chi tiêu", cũng như cho "số dư ngân hàng" -- "tax rate", "phone price", "accessory price", "spending threshold", và "bank account balance".
 * You should define functions for calculating the tax and for formatting the price with a "$" and rounding to two decimal places.
 * **Bonus Challenge:** Try to incorporate input into this program, perhaps with the `prompt(..)` covered in "Input" earlier. You may prompt the user for their bank account balance, for example. Have fun and be creative!
 
