@@ -725,14 +725,14 @@ Với suy nghĩ đó, chúng ta hãy cố gắng thực hành một số khái n
 * Sau khi bạn đã tính toán số tiền mua hàng của bạn, thêm thuế phải trả vào, sau đó in ra số tiền mua hàng đã được tính toán và định dạng đầy đủ.
 * Cuối cùng, kiểm tra lại số tiền phải trả với số dư tài khoản ngân hàng để xem thử bạn có đủ khả năng chi trả hay không?
 * Bạn nên thiết lập hằng số cho "thuế suất", "giá điện thoại", "giá phụ kiện", và "mức chi tiêu", cũng như cho "số dư ngân hàng" -- "tax rate", "phone price", "accessory price", "spending threshold", và "bank account balance".
-* You should define functions for calculating the tax and for formatting the price with a "$" and rounding to two decimal places.
-* **Bonus Challenge:** Try to incorporate input into this program, perhaps with the `prompt(..)` covered in "Input" earlier. You may prompt the user for their bank account balance, for example. Have fun and be creative!
+* Bạn nên xác định hàm riêng biệt dành cho việc tính toán thuế, hàm định dạng giá cả với ký tự "$" và làm tròn đến hai chữ số thập phân.
+* **Bonus Challenge:** Cố gắng kết hợp với phương thức nhập đầu vào cho chương trình, dĩ nhiên với câu lệnh `prompt(..)` đã được đề cập đến ở phần "Input" trước đó. Bạn có thể hỏi khách hàng nhập đầu vào cho số dư tài khoản ngân hàng của họ. Hãy vui vẻ và sáng tạo!
 
-OK, go ahead. Try it. Don't peek at my code listing until you've given it a shot yourself!
+Ok, go ahead. Thử thách với nó. Đừng nhìn vào code của tôi cho đến khi bạn đã thử bằng chính sức mình.
 
-**Note:** Because this is a JavaScript book, I'm obviously going to solve the practice exercise in JavaScript. But you can do it in another language for now if you feel more comfortable.
+**Note:** Bởi vì đây là sách JavaScript, nên dĩ nhiên tôi sẽ giải quyết các bài tập thực hành bằng JavaScript. Nhưng bạn có thể giải chúng bằng các ngôn ngữ khác miễn là bạn cảm thấy thoải mái.
 
-Here's my JavaScript solution for this exercise:
+Sau đây là giải pháp JavaScript của tôi cho các bài tập này:
 
 ```js
 const SPENDING_THRESHOLD = 200;
@@ -752,54 +752,61 @@ function formatAmount(amount) {
 }
 
 // keep buying phones while you still have money
+// tiếp tục mua thêm điện thoại nếu bạn vẫn còn tiền
 while (amount < bank_balance) {
 	// buy a new phone!
+  // mua thêm một chiếc điện thoại!
 	amount = amount + PHONE_PRICE;
 
 	// can we afford the accessory?
+  // kiểm tra xem bạn có thể mua được phụ kiện không?
 	if (amount < SPENDING_THRESHOLD) {
 		amount = amount + ACCESSORY_PRICE;
 	}
 }
 
 // don't forget to pay the government, too
+// đừng quên trả tiền cho chính phủ, thuế đó!
 amount = amount + calculateTax( amount );
 
 console.log(
 	"Your purchase: " + formatAmount( amount )
 );
 // Your purchase: $334.76
+// Tổng tiền phải trả: $334.76
 
 // can you actually afford this purchase?
+// kiểm tra xem bạn có đủ khả năng thanh toán không?
 if (amount > bank_balance) {
 	console.log(
 		"You can't afford this purchase. :("
 	);
 }
 // You can't afford this purchase. :(
+// Bạn không đủ khả năng thanh toán :(
 ```
 
-**Note:** The simplest way to run this JavaScript program is to type it into the developer console of your nearest browser.
+**Note:** Cách đơn giản nhất để chạy chương trình JavaScript này là bạn gõ code vào developer console của trình duyệt bạn hay dùng.
 
-How did you do? It wouldn't hurt to try it again now that you've seen my code. And play around with changing some of the constants to see how the program runs with different values.
+Bạn đã làm thế nào? Chắc chắn sẽ không làm bạn đau nếu như bạn thử lại lần nữa sau khi đã xem những dòng code của tôi. Và thử thay đổi những hằng số để xem thử chương trình sẽ chạy thế nào với những giá trị khác nhau.
 
-## Review
+## Tổng kết (Review)
 
-Learning programming doesn't have to be a complex and overwhelming process. There are just a few basic concepts you need to wrap your head around.
+Học lập trình không phải là một quá trình phức tạp và đau đầu. Nó đơn giản chỉ là một vài khái niệm cơ bản mà bạn cần nắm vững mà thôi.
 
-These act like building blocks. To build a tall tower, you start first by putting block on top of block on top of block. The same goes with programming. Here are some of the essential programming building blocks:
+Quá trình đó giống như là việc xây những khối nhà. Để xây được một khối tháp cao, đầu tiên bạn phải bắt đầu bằng việc đặt từng khối nhỏ lên nhau. Học lập trình cùng tương tự như vậy. Dưới đây là một trong số những "khối chương trình" cần thiết cho bạn:
 
-* You need *operators* to perform actions on values.
-* You need values and *types* to perform different kinds of actions like math on `number`s or output with `string`s.
-* You need *variables* to store data (aka *state*) during your program's execution.
-* You need *conditionals* like `if` statements to make decisions.
-* You need *loops* to repeat tasks until a condition stops being true.
-* You need *functions* to organize your code into logical and reusable chunks.
+* Bạn cần các *operators* (ví dụ: các phép tính cộng trừ nhân chia) để thao tác trên các giá trị.
+* Bạn cần giá trị và các kiểu dữ liệu để thực hiện các hành động khác nhau ví dụ như tính toán trên kiểu `number` hoặc xuất đầu ra trên kiểu `string`.
+* Bạn cần các biến *variables* để lưu trữ dữ liệu trong suốt quá trình hoạt động của chương trình (aka *state*).
+* Bạn cần các điều kiện *conditionals* như là `if` để đưa ra các quyết định.
+* Bạn cần các vòng lặp *loops* để lặp lại các công việc cho đến khi một điều kiện không còn đúng nữa.
+* Bạn cần các hàm số *functions* để tổ chức code của bạn thành những khối hợp logic và có thể tái sử dụng.
 
-Code comments are one effective way to write more readable code, which makes your program easier to understand, maintain, and fix later if there are problems.
+Code comments là một trong những cách hiệu quả để làm cho code của bạn dễ đọc hơn, làm cho chương trình của bạn dễ hiểu, dễ duy trì, và dễ sửa chữa trong trường hợp nếu có vấn đề xảy ra sau này.
 
-Finally, don't neglect the power of practice. The best way to learn how to write code is to write code.
+Cuối cùng, đừng bỏ qua sức mạnh của thực hành. Cách tốt nhất để học viết code là viết nó ra.
 
-I'm excited you're well on your way to learning how to code, now! Keep it up. Don't forget to check out other beginner programming resources (books, blogs, online training, etc.). This chapter and this book are a great start, but they're just a brief introduction.
+Tôi vui mừng vì bạn đã làm rất tốt trên con đường học tập lập trình. Hãy tiếp tục giữ lấy tinh thần đó. Đừng quên kiểu tra thêm những nguồn tài nguyên khác cho người mới bắt đầu học lập trình như là sách, blogs, các khoá học online... Chương này và cuốn sách này là một sự khởi đồng tốt cho bạn, nhưng chúng chỉ là những lời giới thiệu ngắn gọn trên con đường học tập của bạn mà thôi.
 
-The next chapter will review many of the concepts from this chapter, but from a more JavaScript-specific perspective, which will highlight most of the major topics that are addressed in deeper detail throughout the rest of the series.
+Chương tiếp theo sẽ tiếp tục xem lại rất nhiều khái niệm đã được nói ở chương này, nhưng tất nhiên sẽ từ một góc nhìn JavaScript hơn. Những chủ đề chính sẽ được tìm hiểu và đào sâu hơn trong những phần còn lại của series này.
