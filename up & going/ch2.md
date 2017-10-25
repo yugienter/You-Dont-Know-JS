@@ -1,28 +1,28 @@
 # You Don't Know JS: Up & Going
 # Chapter 2: Into JavaScript
 
-In the previous chapter, I introduced the basic building blocks of programming, such as variables, loops, conditionals, and functions. Of course, all the code shown has been in JavaScript. But in this chapter, we want to focus specifically on things you need to know about JavaScript to get up and going as a JS developer.
+Trong chương trước, tôi đã giới thiệu các khối xây dựng cơ bản của lập trình, chẳng hạn như các biến, các vòng lặp, các điều kiện và các hàm (variables, loops, conditionals, and functions). Tất nhiên, tất cả các mã đã được hiển thị trong JavaScript. Nhưng trong chương này, chúng tôi muốn tập trung cụ thể vào những điều bạn cần biết về JavaScript để có được và trở thành một nhà phát triển JS.
 
-We will introduce quite a few concepts in this chapter that will not be fully explored until subsequent *YDKJS* books. You can think of this chapter as an overview of the topics covered in detail throughout the rest of this series.
+Chúng tôi sẽ giới thiệu một số khái niệm trong chương này mà sẽ không được khám phá đầy đủ cho tới những cuốn sách * YDKJS * tiếp theo. Bạn có thể nghĩ chương này như là một tổng quan về các chủ đề được đề cập chi tiết trong suốt phần còn lại của loạt bài này.
 
-Especially if you're new to JavaScript, you should expect to spend quite a bit of time reviewing the concepts and code examples here multiple times. Any good foundation is laid brick by brick, so don't expect that you'll immediately understand it all the first pass through.
+Đặc biệt nếu bạn là người mới sử dụng JavaScript, bạn nên dành nhiều thời gian để xem lại các khái niệm và ví dụ mã ở đây nhiều lần. Bất kỳ nền móng nào cũng được đặt bằng từng viên gạch, do đó, bạn đừng mong rằng ngay lập tức bạn sẽ hiểu toàn bộ nó, đây là bước đi đầu tiên.
 
-Your journey to deeply learn JavaScript starts here.
+Hành trình của bạn để học hỏi sâu sắc JavaScript bắt đầu từ đây.
 
-**Note:** As I said in Chapter 1, you should definitely try all this code yourself as you read and work through this chapter. Be aware that some of the code here assumes capabilities introduced in the newest version of JavaScript at the time of this writing (commonly referred to as "ES6" for the 6th edition of ECMAScript -- the official name of the JS specification). If you happen to be using an older, pre-ES6 browser, the code may not work. A recent update of a modern browser (like Chrome, Firefox, or IE) should be used.
+**Lưu ý:** Như tôi đã nói ở Chương 1, bạn chắc chắn nên thử tất cả các mã này khi bạn đọc và làm việc thông qua chương này. Hãy lưu ý rằng một số mã ở đây giả định các khả năng được giới thiệu trong phiên bản JavaScript mới nhất tại thời điểm viết bài này (thường được gọi là "ES6" cho ấn bản thứ 6 của ECMAScript - tên chính thức của đặc tả JS). Nếu bạn tình cờ sử dụng trình duyệt cũ hơn, trước ES6, mã có thể không hoạt động. Một cập nhật gần đây của một trình duyệt hiện đại (như Chrome, Firefox hoặc IE) nên được sử dụng.
 
 ## Values & Types
 
-As we asserted in Chapter 1, JavaScript has typed values, not typed variables. The following built-in types are available:
+Như chúng ta đã khẳng định trong Chương 1, JavaScript là kiểu dữ liệu (types values) chứ không phải kiểu biến (not typed variables). Có sẵn các kiểu dữ liệu sau:
 
 * `string`
 * `number`
 * `boolean`
-* `null` and `undefined`
+* `null` và `undefined`
 * `object`
-* `symbol` (new to ES6)
+* `symbol` (mới trong ECMAScript 6)
 
-JavaScript provides a `typeof` operator that can examine a value and tell you what type it is:
+JavaScript cung cấp một toán tử `typeof` có thể kiểm tra một giá trị và cho bạn biết kiểu của nó:
 
 ```js
 var a;
@@ -38,7 +38,7 @@ a = true;
 typeof a;				// "boolean"
 
 a = null;
-typeof a;				// "object" -- weird, bug
+typeof a;				// "object" -- weird, bug (kỳ quặc, lỗi)
 
 a = undefined;
 typeof a;				// "undefined"
@@ -47,19 +47,19 @@ a = { b: "c" };
 typeof a;				// "object"
 ```
 
-The return value from the `typeof` operator is always one of six (seven as of ES6! - the "symbol" type) string values. That is, `typeof "abc"` returns `"string"`, not `string`.
+Toán tử `typeof` luôn trả về kiểu giá trị là chuỗi, 1 trong 6 kiểu giá trị trên (7 kiểu nếu là ES6 - kiểu "symbol") . Giống như, `typeof "abc"` trả về  `"string"`, chứ không phải `string`.
 
-Notice how in this snippet the `a` variable holds every different type of value, and that despite appearances, `typeof a` is not asking for the "type of `a`", but rather for the "type of the value currently in `a`." Only values have types in JavaScript; variables are just simple containers for those values.
+Lưu ý rằng trong đoạn mã này, biến `a` giữ tất cả kiểu giá trị khác nhau, và mặc dù có những sự xuất hiện,` typeof a` không yêu cầu "typeof `a`", mà là yêu cầu "loại giá trị hiện tại `a`." ("type of the value currently in `a`.") Chỉ có các kiểu dữ liệu trong JavaScript; biến (variable) đơn giản là để chứa các giá trị.
 
-`typeof null` is an interesting case, because it errantly returns `"object"`, when you'd expect it to return `"null"`.
+`typeof null` là một trường hợp thú vị, bởi vì nó trả về` "object"`, khi bạn mong đợi nó trả về `"null"`.
 
-**Warning:** This is a long-standing bug in JS, but one that is likely never going to be fixed. Too much code on the Web relies on the bug and thus fixing it would cause a lot more bugs!
+**Cảnh báo:** Đây là một lỗi lâu đời trong JS, nhưng có khả năng là nó sẽ không bao giờ được fix. Có quá nhiều mã trên Web dựa vào lỗi này và sữa chữa nó sẽ gây ra nhiều lỗi hơn!
 
-Also, note `a = undefined`. We're explicitly setting `a` to the `undefined` value, but that is behaviorally no different from a variable that has no value set yet, like with the `var a;` line at the top of the snippet. A variable can get to this "undefined" value state in several different ways, including functions that return no values and usage of the `void` operator.
+Ngoài ra, lưu ý `a = undefined`. Chúng tôi đang thiết lập một cách rõ ràng giá trị `a` với giá trị` undefined`, nhưng hành vi đó không khác gì một biến mà không có giá trị nào được đặt, giống như dòng `var a;` ở đầu đoạn mã. Một biến có thể nhận trạng thái giá trị "undefined" theo nhiều cách khác nhau, bao gồm các hàm không trả về giá trị và cách sử dụng toán tử `void`.
 
 ### Objects
 
-The `object` type refers to a compound value where you can set properties (named locations) that each hold their own values of any type. This is perhaps one of the most useful value types in all of JavaScript.
+Kiểu `object` đề cập đến một giá trị phức hợp, nơi bạn có thể thiết lập các thuộc tính properties (named locations) mà mỗi thuộc tính đều giữ được các kiểu dữ liệu của chúng. Đây có lẽ là một trong những loại giá trị hữu ích nhất trong tất cả JavaScript.
 
 ```js
 var obj = {
@@ -77,15 +77,17 @@ obj["b"];	// 42
 obj["c"];	// true
 ```
 
-It may be helpful to think of this `obj` value visually:
+Nó có thể hữu ích khi nghĩ đến giá trị `obj` trực quan:
 
 <img src="fig4.png">
 
-Properties can either be accessed with *dot notation* (i.e., `obj.a`) or *bracket notation* (i.e., `obj["a"]`). Dot notation is shorter and generally easier to read, and is thus preferred when possible.
+Thuộc tính có thể được truy cập bằng *dấu chấm* (tức là, `obj.a`) hoặc *dấu ngoặc vuông* (tức là, `obj ["a"]`). Dấu chấm nhỏ hơn và dễ đọc hơn, và do đó được ưa thích hơn khi có thể.
 
 Bracket notation is useful if you have a property name that has special characters in it, like `obj["hello world!"]` -- such properties are often referred to as *keys* when accessed via bracket notation. The `[ ]` notation requires either a variable (explained next) or a `string` *literal* (which needs to be wrapped in `" .. "` or `' .. '`).
+Ký hiệu dấu ngoặc vuông rất hữu ích nếu bạn có một tên thuộc tính có các ký tự đặc biệt trong đó, chẳng hạn như `obj["hello world!"]` -- Các thuộc tính như vậy thường được gọi là *keys* khi truy cập qua ký hiệu dấu ngoặc vuông. Ký hiệu `[]` yêu cầu phải có một biến (được giải thích ở phần sau) hoặc một `string` *theo nghĩa đen* (cần được gói trong `" .. "` hoặc `' .. '`).
 
-Of course, bracket notation is also useful if you want to access a property/key but the name is stored in another variable, such as:
+
+Tất nhiên, dấu ngoặc đơn cũng rất hữu ích nếu bạn muốn truy cập vào property/key (thuộc tính hoặc key) nhưng tên được lưu trữ trong một biến khác, chẳng hạn như:
 
 ```js
 var obj = {
@@ -99,9 +101,9 @@ obj[b];			// "hello world"
 obj["b"];		// 42
 ```
 
-**Note:** For more information on JavaScript `object`s, see the *this & Object Prototypes* title of this series, specifically Chapter 3.
+**Lưu ý:** Để biết thêm thông tin về các `object` JavaScript, xem phần *this & Object Prototypes* của loạt bài này, cụ thể là Chương 3.
 
-There are a couple of other value types that you will commonly interact with in JavaScript programs: *array* and *function*. But rather than being proper built-in types, these should be thought of more like subtypes -- specialized versions of the `object` type.
+Có hai kiểu dữ liệu thường tương tác với nhau trong các chương trình JavaScript: *array* và *function*. Nhưng thay vì được xây dựng đúng loại, nó lại được nghĩ đến như 1 phiên bản đặc biệt của các kiểu `object`.
 
 #### Arrays
 
